@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" id="fileInput" >
+    <button onclick="uploadImage()">Upload</button>
+    <br>
+    <img style="height: 100px; width: 100px;" id="imageDisplay">
+    
+    <script>
+        class Image{
+            constructor(name,src){
+                this.name=name;
+                this.src=src;
+            }
+        }
+        function uploadImage(){
+            let fileInput = document.getElementById("fileInput");
+              let file = fileInput.files[0];
+        
+           let imageUrl = URL.createObjectURL(file);
+           let img = new Image(file.name,imageUrl);
+           let imageDisplay = document.getElementById("imageDisplay");
+           imageDisplay.src= img.src;
+
+document.getElementById("result").innerHTML="image name" + img.name ;
+   }
+
+    </script>
+</body>
+</html>

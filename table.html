@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="vote" placeholder="enter your age">
+    <button onclick="votebutton()"> vote </button> 
+    <p id="result"></p>
+    <script>
+        // function multiplicationtable(){
+        //     let result="";
+        //     for(let i=1; i<=10; i++){
+        //         result += " 3 x" + i + "="+ (3*i) + "<br>";
+        //     }
+        //     return result;
+        // }
+        // document.getElementById("demo").innerHTML =multiplicationtable();
+    // //
+    //  const number=[ 5,6,8,4];
+    //  number.push(7);
+    //  number.pop();
+    //  number.sort();
+    //  document.getElementById("demo").innerHTML =number;
+     
+    // conditions 
+    function votebutton(){
+        let age =document.getElementById("vote").value;
+ if(age<18){
+        document.getElementById("result").innerHTML ="you are not eligible to vote";
+    }
+    if(age>=18){
+        document.getElementById("result").innerHTML ="you are eligible to vote";
+    }
+    else{
+        document.getElementById("result").innerHTML ="no age entered";
+    }
+}
+
+
+
+
+    </script>
+       
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Statement -->
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor iusto ea
+      molestias deserunt quidem sapiente qui, maxime quasi, consequatur,
+      asperiores vel harum voluptates? Deleniti et distinctio minima. Mollitia,
+      dolore corrupti!
+    </p>
+    <p id="demo"></p>
+
+    <script >
+// //       function multiplication(a,b){
+// //         // condition
+// //         return(a*b);
+// //       }
+// //       document.getElementById("demo").innerHTML = "the multiplication is" + multiplication(5,6);
+// // //      object
+//        const info ={
+//         name:"jhon",
+//         age:24,
+//         city:"newyork"
+
+//        };
+//   let text ="name is"+info[name] +"</br>"+info.age +"years old"+ "lives in"+ info.city;
+//       document.getElementById("demo").innerHTML = text;
+        // let text = "john";
+        // let text1= "smith";
+        // let text2 =text+" "+text1;
+        // document.getElementById("demo").innerHTML ="full name"+ ":" +" "+ text2;
+
+        const employee ={
+          firstname:"john",
+          lastname:"doe",
+          age:25,
+          fullname:function(){
+            return this.firstname + " " + this.lastname;
+          }
+        }
+        // method
+        let fn =employee.fullname();
+        console.log(fn);
+        document.getElementById("demo").innerHTML = fn;
+    </script>
+  </body>
+</html>

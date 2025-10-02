@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="today" placeholder="ENTER DAY">
+    <button onclick="checkday()">CHECK DAY</button>
+    <p id="result"></p>
+    <script>
+        function checkday(){
+            let day = document.getElementById("today").value;
+            switch(day){
+                case "Monday":
+                    document.getElementById("result").innerHTML="today is monday";
+                    break;
+                    case "tuesday":
+                        document.getElementById("result").innerHTML="today is tuesday";
+                        break;
+                    case "wednesday":
+                        document.getElementById("result").innerHTML="today is wednesday";
+                        break;
+                    case "thursday":
+                        document.getElementById("result").innerHTML="today is thursday";
+                        break;
+                        case "friday":
+                            document.getElementById("result").innerHTML="today is friday";
+                            break;
+                            case "saturday":
+                                document.getElementById("result").innerHTML="today is saturday";
+                                break;
+                                case "sunday":
+                                    document.getElementById("result").innerHTML="today is sunday";
+                                    break;
+                                    default:
+                                    document.getElementById("result").innerHTML="invalid day";
+            }
+
+        }
+    </script>
+</body>
+</html>

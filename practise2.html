@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="num" placeholder="Enter first number">
+    <input type="text" id="num2" placeholder="Enter second number">
+    <select id="operation">
+        <option value="add">ADDITION</option>
+        <option value="sub">SUBTRACTION</option>
+        <option value="mul">MULTIPLICATION</option>
+        <option value="div">DIVISION</option>
+    </select>
+    <button onclick="maths()"> SHOW RESULT</button>
+    <p id="result"></p>
+    <script>
+        // function maths(){
+        //     let num1 =parseInt(document.getElementById("num").value);
+        //     let num2 =parseInt(document.getElementById("num2").value);
+        //     let operation =document.getElementById("operation").value;
+        //     switch(operation){
+        //         case "add":
+        //             document.getElementById("result").innerHTML=num1 + num2;
+        //             break;
+        //             case "sub":
+        //                 document.getElementById("result").innerHTML=num1 - num2;
+        //                 break;
+        //                 case "mul":
+        //                     document.getElementById("result").innerHTML=num1 * num2;
+        //                     break;
+        //                     case "div":
+        //                         document.getElementById("result").innerHTML=num1 / num2;
+        //                         break;
+        //                         default:
+        //                         document.getElementById("result").innerHTML="invalid operation";
+        //     }
+
+        // }
+        function maths(){
+            let num1 =parseInt(document.getElementById("num").value)
+            let num2 =parseInt(document.getElementById("num2").value)
+            let operation =document.getElementById("operation").value
+            if(operation == "add"){
+                document.getElementById("result").innerHTML=num1 + num2
+            }
+            else if(operation == "sub"){
+                document.getElementById("result").innerHTML=num1 - num2
+            }
+            else if(operation == "mul"){
+                document.getElementById("result").innerHTML=num1 * num2
+            }
+            else if(operation == "div"){
+                document.getElementById("result").innerHTML= num1 / num2
+            }
+            else{
+                document.getElementById("result").innerHTML= "invalid operation"
+            }
+            }
+            
+            
+        
+        
+    </script>
+</body>
+</html>

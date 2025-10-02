@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: lightblue;">
+    <h1 style="text-align: center;"> COMPUTER COURSE REGISTRATION</h1>
+    <br>
+    
+    <h3>ENTER YOUR DETAILS</h3>
+    <input type="text" id="nameInput" placeholder="Enter Name" required>
+    <br>
+    <br>
+    <input type="text" id="fathernameInput" placeholder="Enter Father Name" required>
+    <br>
+    <br>
+    <input type="text" id="emailInput" placeholder="Enter Email" required>
+    <br>
+    <br>
+    <input type="text" id="no" placeholder="Enter your phone number" required>
+    <br>
+    <br>
+    <h3>SELECT YOUR COURSE</h3>
+    
+    
+    <select  id="course">
+        <option value="cyber">CYBER SECURITY</option>
+        <option value="data"> DATA SCIENCE</option>
+        <option value="AI">ARTIFICIAL INTELLIGENCE</option>
+        <option value="ML">MACHINE LEARNING</option>
+    </select>
+    <br>
+    <br>
+    
+    <h3>UPLOAD YOUR IMAGE</h3>
+    
+    <input type="file" id="fileInput">
+    <button onclick="uploadimage()">UPLOAD YOUR IMAGE</button>
+    <br>
+    <img style="height: 100px; width: 100px; " id="imageDisplay">
+    <br>
+    <button onclick="submitForm()" id="submit"> SUBMIT </button>
+
+
+
+
+    <script>
+        class image{
+            constructor(name,src){
+                this.name=name;
+                this.src=src;
+            }
+        }
+        function uploadimage(){
+            let fileinput = document.getElementById("fileInput");
+            let file =fileInput.files[0];
+            
+            let imageUrl =URL.createObjectURL(file);
+            let img = new image(file.name,imageUrl);
+            let imageDisplay =document.getElementById("imageDisplay");
+            imageDisplay.src=img.src;
+            
+            document.getElementById("result").innerHTML="image name" + img.name ;
+
+             
+        }
+        function submitForm(){
+            if(document.getElementById("nameInput").value=="" || document.getElementById("fathernameInput").value=="" || document.getElementById("emailInput").value=="" || document.getElementById("no").value=="" || document.getElementById("course").value=="" || document.getElementById("fileInput").value==""){
+                return alert("please fill all the details");
+            }
+            alert("form submitted successfully");
+            document.getElementById("nameInput").value="";
+            document.getElementById("fathernameInput").value="";
+            document.getElementById("emailInput").value="";
+            document.getElementById("no").value="";
+            document.getElementById("course").value="";
+            document.getElementById("fileInput").value="";
+            document.getElementById("imageDisplay").src=""; 
+
+        }
+
+    
+            
+        
+
+    </script>
+    
+</body>
+</html>
